@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="reyst.gsihome.client.ui.login.LoginViewModel"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.login.LoginActivity">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/h_marging_login_screen"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="@dimen/h_marging_login_screen"
+            android:inputType="textPersonName|textEmailAddress"
+            android:hint="@string/hint_login"
+            android:text="@={model.login}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/h_marging_login_screen"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/h_marging_login_screen"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:text="@={model.password}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_login"
+            />
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/h_marging_login_screen"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="@dimen/h_marging_login_screen"
+            android:text="@string/sign_in"
+            android:textAllCaps="false"
+            android:onClick="@{(view) -> model.login()}"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

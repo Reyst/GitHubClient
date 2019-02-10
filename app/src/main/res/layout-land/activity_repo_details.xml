@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="repo"
+            type="reyst.gsihome.client.domain.Repo" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_repo_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+
+
+            android:text="@{repo.textInfo}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="lksdgkangjsgk" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.333333" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.666666" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_collaborators"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collaborators"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_collaborators"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toStartOf="@id/guideline1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_collaborators"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_branches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/branches"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+
+            app:layout_constraintHorizontal_bias="0"
+
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_branches"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toEndOf="@id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv_branches"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_commits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/commits"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
+
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_commits"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/tv_commits"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

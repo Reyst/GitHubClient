@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GitHub Client</string>
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="err_invalid_credentials">Incorrect login or password</string>
+    <string name="err_internet">Internet error</string>
+    <string name="collaborators">Collaborators</string>
+    <string name="commits">Commits</string>
+    <string name="branches">Branches</string>
+</resources>
